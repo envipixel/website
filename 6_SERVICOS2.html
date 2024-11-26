@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #1a1a2e;
+            color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px; /* Largura fixa */
+            height: 400px; /* Altura fixa para todas as divs */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .card ul li {
+            background-color: #ffffff22;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+        }
+        
+        .card ul li:hover {
+            background-color: #ff4500;
+            transition: 0.3s;
+        }
+
+        /* Estilos individuais para cada cartão */
+        .consultoria {
+            background-image: url('consultoria.jpg'); /* Altere a imagem de fundo conforme necessário */
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .engenharia {
+            background-image: url('engenharia.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+
+        .negocios {
+            background-image: url('negocios.jpg');
+            background-size: cover;
+            background-blend-mode: darken;
+        }
+    </style>
+</head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffffff; /* Fundo branco */
+            color: #000;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px; /* Largura fixa */
+            height: 400px; /* Altura fixa para todas as divs */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Alinha verticalmente */
+            align-items: center; /* Alinha horizontalmente */
+            text-align: center; /* Centraliza o texto */
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #000; /* Texto preto no título */
+        }
+
+        .card ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card ul li {
+            background-color: #007bff; /* Fundo azul para os links */
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 16px;
+            color: #fff; /* Texto branco nos links */
+            width: 100%; /* Faz o item ocupar toda a largura da lista */
+        }
+        
+        .card ul li:hover {
+            background-color: #0056b3; /* Alteração de cor ao passar o mouse */
+            transition: 0.3s;
+        }
+
+        /* Estilos individuais para cada cartão */
+        .consultoria {
+            background-size: cover;
+        }
+
+        .engenharia {
+            background-size: cover;
+        }
+
+        .negocios {
+            background-size: cover;
+        }
+    </style>
+</head>
+    <div class="container">
+        <!-- Consultoria -->
+        <div class="card consultoria">
+            <h2>Consultoria</h2>
+            <ul>
+                <li>Economia e Investimentos</li>
+                <li>Estudos Estratégicos</li>
+                <li>Políticas Públicas</li>
+                <li>Sustentabilidade | ESG</li>
+            </ul>
+        </div>
+
+        <!-- Engenharia e Projetos -->
+        <div class="card engenharia">
+            <h2>Engenharia e Projetos</h2>
+            <ul>
+                <li>Projetos de Engenharia</li>
+                <li>Consultoria em Engenharia</li>
+                <li>Fiscalização de Obras</li>
+            </ul>
+        </div>
+
+        <!-- Gerenciamento e Negócios -->
+        <div class="card negocios">
+            <h2>Gerenciamento e Negócios</h2>
+            <ul>
+                <li>Negócios e Oportunidades</li>
+                <li>Fundos de Investimento</li>
+                <li>Propriedades Florestais</li>
+                <li>Operações Florestais</li>
+            </ul>
+        </div>
+    </div>

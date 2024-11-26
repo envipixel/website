@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Adjustable Video with Buttons</title>
+    <style>
+        /* Estilo para garantir que a página ocupe toda a altura e tenha o fundo desejado */
+        body, html {
+            background-color: #11013d; /* Fundo da página na cor solicitada */
+        }       
+    <style>
+        /* Estilo para tornar o vídeo responsivo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Altura do vídeo */
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* Estilo para os botões sobre o vídeo */
+        .button-container {
+            position: absolute;
+            top: 60px;
+            left: 47%;
+            transform: translateX(-50%);
+            display: flex;
+            right: 10px; /* Alinha os botões à direita */
+            gap: 8px;
+        }
+
+        .button-container a {
+            padding: 13px 60px;
+            background-color: #11013d; /* Fundo branco */
+            color: white; /* Cor do texto */
+            text-decoration: none;
+            border-radius: 0;
+            min-width: auto;
+            font-weight: bold; /* Define as letras em negrito */
+            transition: background-color 0.3s ease;
+            font-family: Avenir, sans-serif; /* Fonte Avenir */
+            font-size: 18px; /* Tamanho da fonte */
+            border: 0px solid #88c96f; /* Bordas suaves para destaque */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            line-height: 1.5; /* Ajusta a altura da linha para melhor alinhamento vertical */
+            vertical-align: center; /* Alinha o texto verticalmente */
+        }
+
+        .button-container a:hover {
+            background-color: #88c96f; /* Fundo mais claro no hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <!-- Contêiner do vídeo -->
+        <div class="video-container">
+            <!-- Vídeo MP4 -->
+            <video autoplay loop muted playsinline>
+                <source src="images/video_logo_head5.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+
+            <!-- Botões sobre o vídeo -->
+            <div class="button-container">
+                <a href="HOME_1.html">HOME</a>
+                <a href="6_SERVICOS.html">SERVIÇOS</a>
+                <a href="3_PRODUTOS.html">FERRAMENTAS</a>
+                <a href="5_CURSOS.html">CURSOS E TREINAMENTOS</a>
+                <a href="2_SOBRE.html">SOBRE NÓS</a>
+                <a href="4_CONTATO.html">CONTATO</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style>
+        body {
+            font-family: Avenir, sans-serif;
+            background-color: #11013d;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-form {
+            margin-top: 30px;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #838181;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #25d366;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #1ebe57;
+        }
+    </style>
+</head>
+<!-- Formulário de contato -->
+<div class="contact-form">
+    <h2>Entre em Contato Conosco</h2>
+    <form action="https://formspree.io/f/{form_id}" method="POST">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="phone">Telefone:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000; /* Para garantir que o botão fique sobre outros elementos */
+        }
+
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .whatsapp-button img {
+            margin-right: 10px;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebd56;
+        }
+    </style>
+    <title>Botão WhatsApp</title>
+</head>
+<body>
+
+    <div class="footer">
+        <a href="https://wa.me/5541999999999" class="whatsapp-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20">
+            Fale no WhatsApp
+        </a>
+    </div>
+
+</body>
+
+
