@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Adjustable Video with Buttons</title>
+    <style>
+        /* Estilo para garantir que a página ocupe toda a altura e tenha o fundo desejado */
+        body, html {
+            background-color: #11013d; /* Fundo da página na cor solicitada */
+        }       
+    <style>
+        /* Estilo para tornar o vídeo responsivo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Altura do vídeo */
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* Estilo para os botões sobre o vídeo */
+       /* Estilo para os botões sobre o vídeo */
+       .button-container {
+            position: absolute;
+            top: 60px;
+            left: 47%;
+            transform: translateX(-50%);
+            display: flex;
+            right: 10px; /* Alinha os botões à direita */
+            gap: 8px;
+        }
+
+        .button-container a {
+            padding: 13px 60px;
+            background-color: #11013d; /* Fundo branco */
+            color: white; /* Cor do texto */
+            text-decoration: none;
+            border-radius: 0;
+            min-width: auto;
+            font-weight: bold; /* Define as letras em negrito */
+            transition: background-color 0.3s ease;
+            font-family: Avenir, sans-serif; /* Fonte Avenir */
+            font-size: 18px; /* Tamanho da fonte */
+            border: 0px solid #88c96f; /* Bordas suaves para destaque */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            line-height: 1.5; /* Ajusta a altura da linha para melhor alinhamento vertical */
+            vertical-align: center; /* Alinha o texto verticalmente */
+        }
+
+        .button-container a:hover {
+            background-color: #88c96f; /* Fundo mais claro no hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <!-- Contêiner do vídeo -->
+        <div class="video-container">
+            <!-- Vídeo MP4 -->
+            <video autoplay loop muted playsinline>
+                <source src="images/video_logo_head5.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+
+            <!-- Botões sobre o vídeo -->
+            <div class="button-container">
+                <a href="index.html.html">HOME</a>
+                <a href="6_SERVICOS.html">SERVIÇOS</a>
+                <a href="3_PRODUTOS.html">FERRAMENTAS</a>
+                <a href="5_CURSOS.html">CURSOS E TREINAMENTOS</a>
+                <a href="2_SOBRE.html">SOBRE NÓS</a>
+                <a href="4_CONTATO.html">CONTATO</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato</title>
+    <style><body>
+
+        <h2 style="text-align: left;">Connect with us on Social Media</h2>
+    
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/seuperfil" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/seuperfil" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/seuperfil" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.twitter.com/seuperfil" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    
+    </body>
+    </html>
+        body {
+            font-family: Avenir, sans-serif;
+            background-color: #11013d;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contact-form {
+            margin-top: 30px;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #11013d;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .contact-form label {
+            display: block;
+            text-align: left;
+            margin: 10px 0 5px 0;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #25d366;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #1ebe57;
+        }
+    </style>
+</head>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #11013d; /* Fundo escuro para contraste */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            align-items: center;
+        }
+
+        .text-section {
+            width: 45%;
+        }
+
+        .text-section h1 {
+            font-size: 32px; /* Título maior */
+            color: #ffffff; /* Cor do título branco */
+            margin-bottom: 20px;
+        }
+
+        .text-section p {
+            font-size: 18px; /* Tamanho do texto aumentado */
+            line-height: 1.8;
+            color: #ffffff; /* Cor do texto branco */
+        }
+
+        .image-section {
+            width: 45%;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #11013d; /* Linha horizontal branca */
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Estrutura Completa de Página</title>
+        <style>
+            /* Estilo global para garantir que a página ocupe toda a altura e tenha o fundo desejado */
+            body, html {
+                background-color: #11013d; /* Fundo da página na cor solicitada */
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
+    
+            /* Estilo para o vídeo responsivo */
+            .video-container {
+                position: relative;
+                width: 100%;
+                height: 200px; /* Altura do vídeo */
+                overflow: hidden;
+            }
+    
+            video {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+    
+            /* Estilo para os botões sobre o vídeo */
+            .button-container {
+                position: absolute;
+                top: 60px;
+                left: 47%;
+                transform: translateX(-50%);
+                display: flex;
+                gap: 8px;
+            }
+    
+            .button-container a {
+                padding: 13px 60px;
+                background-color: #11013d;
+                color: white;
+                text-decoration: none;
+                border-radius: 0;
+                font-weight: bold;
+                transition: background-color 0.3s ease;
+                font-family: Avenir, sans-serif;
+                font-size: 18px;
+                border: 0px solid #88c96f;
+                text-align: center;
+                line-height: 1.5;
+            }
+    
+            .button-container a:hover {
+                background-color: #88c96f;
+            }
+    
+            /* Estilo para as caixas de serviço */
+            .container {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                padding: 40px;
+            }
+    
+            .card {
+                background-color: #ffffff; /* Fundo branco */
+                color: #000;
+                border-radius: 10px;
+                padding: 20px;
+                width: 300px;
+                height: 400px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+    
+            .card h2 {
+                margin-bottom: 20px;
+            }
+    
+            .card ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .card ul li {
+                background-color: #11013d;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 16px;
+                color: #fff;
+                width: 100%;
+                text-align: center;
+            }
+    
+            .card ul li:hover {
+                background-color: #11013d;
+                transition: 0.3s;
+            }
+    
+            /* Estilo para o rodapé fixo com o botão WhatsApp */
+            .footer {
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                z-index: 1000;
+            }
+    
+            .whatsapp-button {
+                background-color: #25d366;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                border-radius: 5px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                font-family: Arial, sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+            }
+    
+            .whatsapp-button img {
+                margin-right: 10px;
+            }
+    
+            .whatsapp-button:hover {
+                background-color: #1ebd56;
+            }
+        </style>
+    </head>
+
+
+    <!-- Contêiner das seções de serviço -->
+    <div class="container">
+        <div class="card consultoria">
+            <h2>Consultoria e Prestação de Serviços</h2>
+            <ul>
+                <li>Inventário Florestal</li>
+                <li>Levantamento Florístico</li>
+                <li>Projetos de Recuperação de Áreas Degradas - PRAD</li>
+                <li>Estudos e Relatórios de Impactos Ambientais</li>
+                <li>Laudos e Avaliações</li>
+                <li>Modelagem e Simulação</li>
+            </ul>
+        </div>
+
+        <div class="card engenharia">
+            <h2>Desenvolvimento de Ferramentas</h2>
+            <ul>
+                <li>Projetos em R</li>
+                <li>Projetos em Phyton</li>
+                <li>Projetos em Shinny</li>
+                <li>Projetos em Google Earth Engine</li>
+                <li>Interface Gráfica de Usuários</li>
+
+            </ul>
+        </div>
+
+        <div class="card negocios">
+            <h2>Regularização Fundiária e Ambiental</h2>
+            <ul>
+                <li>Georeferenciamento de Imóveis</li>
+                <li>Perícias e Assistência Juridicas e Ambientais</li>
+                <li>Avaliação de Imóveis Rurais</li>
+                <li>Acompanhamento de Supressão Vegetal</li>
+                <li>Apoio aos Processos de Licenciamento Ambiental</li>
+                <li>Cadastro Ambiental Rural - CAR</li>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card consultoria">
+            <h2>Mapeamento</h2>
+            <ul>
+                <li>Levantamento Perimetral</li>
+                <li>Mapeamento de Uso do Solo</li>
+                <li>Análises Temporais</li>
+                <li>Curvas de Nível</li>
+                <li>Modelos Digitais do Terreno</li>
+                <li>Modelos Digitais de Elevação</li>
+                <li>Imagens Ortorretificadas</li>
+            </ul>
+        </div>
+
+        <div class="card engenharia">
+            <h2>Biomassa e Carbono</h2>
+            <ul>
+                <li>Quantificação de Estoques de Biomassa e Carbono</li>
+                <li>Quantificação das Remoções de Biomassa e Carbono</li>
+                <li>Avaliação de Material Combustível</li>
+                <li>Estimativas de Linha de Base de Projetos REDD+ e ARR</li>
+                <li>Monitoramento de Projetos</li>
+
+            </ul>
+        </div>
+
+        <div class="card negocios">
+            <h2>Gestão e Economia</h2>
+            <ul>
+                <li>Avaliação Econômica e de Rntabilidade de Negócios Florestais</li>
+                <li>Estruturação de Negócios e Ativos Florestais/li>
+                <li>Análises de Mercado</li>
+                <li>Avaliação de Preços de Terras e Madeira</li>
+                           </ul>
+        </div>
+    </div>
+
+
+    <div class="main2">
+                <!-- Conteúdo do laboratório SilvaLab -->
+    
+    
+        <div class="content" style="margin-top: 20px; text-align: center; font-family: Avenir, sans-serif; font-size: 14px;color: white;">
+        <h1 class="center" style="font-size: 24px;">SILVAGEOTECH SOLUTIONS</h1>
+        <p class="center">
+            Rua Jose Gineste n. 2522 - Curitiba - Paraná - Brasil - CEP 80.000-000<br>
+            E-mail: silvageotech@gmail.com <br>
+            Fone: +55 (41) 9999-9999
+        </p>
+    </div>
+    
+
+
+
+    <!-- Botão do WhatsApp no rodapé -->
+    <div class="footer">
+        <a href="https://wa.me/5541999999999" class="whatsapp-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20">
+            Fale no WhatsApp
+        </a>
+    </div>
+
+</body>
+</html>

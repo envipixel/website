@@ -1,0 +1,330 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Adjustable Video with Buttons</title>
+    <style>
+        /* Estilo para garantir que a página ocupe toda a altura e tenha o fundo desejado */
+        body, html {
+            background-color: #11013d; /* Fundo da página na cor solicitada */
+        }       
+    <style>
+        /* Estilo para tornar o vídeo responsivo */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 200px; /* Altura do vídeo */
+            overflow: hidden;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+
+        /* Estilo para os botões sobre o vídeo */
+        .button-container {
+            position: absolute;
+            top: 60px;
+            left: 47%;
+            transform: translateX(-50%);
+            display: flex;
+            right: 10px; /* Alinha os botões à direita */
+            gap: 8px;
+        }
+
+        .button-container a {
+            padding: 13px 60px;
+            background-color: #11013d; /* Fundo branco */
+            color: white; /* Cor do texto */
+            text-decoration: none;
+            border-radius: 0;
+            min-width: auto;
+            font-weight: bold; /* Define as letras em negrito */
+            transition: background-color 0.3s ease;
+            font-family: Avenir, sans-serif; /* Fonte Avenir */
+            font-size: 18px; /* Tamanho da fonte */
+            border: 0px solid #88c96f; /* Bordas suaves para destaque */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            line-height: 1.5; /* Ajusta a altura da linha para melhor alinhamento vertical */
+            vertical-align: center; /* Alinha o texto verticalmente */
+        }
+        .button-container a:hover {
+            background-color: #88c96f; /* Fundo mais claro no hover */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <!-- Contêiner do vídeo -->
+        <div class="video-container">
+            <!-- Vídeo MP4 -->
+            <video autoplay loop muted playsinline>
+                <source src="images/video_logo_head5.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+
+            <!-- Botões sobre o vídeo -->
+            <div class="button-container">
+                <a href="index.html.html">HOME</a>
+                <a href="6_SERVICOS.html">SERVIÇOS</a>
+                <a href="3_PRODUTOS.html">FERRAMENTAS</a>
+                <a href="5_CURSOS.html">CURSOS E TREINAMENTOS</a>
+                <a href="2_SOBRE.html">SOBRE NÓS</a>
+                <a href="4_CONTATO.html">CONTATO</a>
+                </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #11013d;
+            margin: 0;
+            padding: 0;
+        }
+
+        .card-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .card {
+            width: 30%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            color: white;
+            text-align: left;
+        }
+
+        .card h2 {
+            margin: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .card p {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+
+        .btn {
+            background-color: #a7f060;
+            color: black;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #82d23b;
+        }
+
+        /* Tornar o layout responsivo */
+        @media (max-width: 1200px) {
+            .card {
+                width: 45%; /* Ajustar para 2 cartões por linha em telas menores */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                width: 100%; /* Ajustar para 1 cartão por linha em telas muito pequenas */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card" style="background-image: url('images/talhoes.png');">
+            <div class="card-content">
+                <h2>TimberTrack </h2>
+                <p>Ferramenta para mapear e identificar os plantios florestais, com especificação de gênero, período de plantio e estoque de volume/biomassa de madeira.</p>
+                <a href="3_1_PRODUTOS_SilvaTrack.html" class="btn">Ler mais sobre TimberTrack</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/arvores_qsm2.png');">
+            <div class="card-content">
+                <h2>SilvaSense</h2>
+                <p>Ferramenta para realizar estimativas de estoque e dinâmica de volume, biomassa e/ou carbono a partir de dados LiDAR (seja UAV ou TLS) integrados com modelos de crescimento e com imagens de satélite (ativo e passivo).</p>
+                <a href="3_2_PRODUTOS_SilvaSense.html" class="btn">Ler mais sobre SilvaSense</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/redd3.png');">
+            <div class="card-content">
+                <h2>SilvaREDD                </h2>
+                <p>Ferramenta para realizar estimativas de estoque e dinâmica de biomassa e/ou carbono a partir de diferentes fontes de informação geoespaciais.</p>
+                <a href="3_3_PRODUTOS_SilvaREDD.html" class="btn">Ler mais sobre SilvaREDD</a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card-container">
+        <div class="card" style="background-image: url('images/produto4.png');">
+            <div class="card-content">
+                <h2>SilvaChange </h2>
+                <p>Ferramenta para monitoramento da evolução da cobertura vegetal (florestal e agrícola). Avaliar as áreas, a saúde da vegetação (danos, sinistros, doenças e pragas).</p>
+                <a href="3_4_PRODUTOS_SilvaChange.html" class="btn">Ler mais sobre SilvaChange</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/FIRE4.png');">
+            <div class="card-content">
+                <h2>SilvaFire</h2>
+                <p>Ferramenta para monitorar a carga de material combustível e mapear a vegetação com maior suscetibilidade ao fogo.</p>
+                <a href="3_5_PRODUTOS_SilvaFire.html" class="btn">Ler mais sobre SilvaFire</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/contagem_arvores2.png');">
+            <div class="card-content">
+                <h2>SilvaSurvey               </h2>
+                <p>Ferramenta aplicada ao inventário florestal de sobrevivência das mudas em plantios florestais. Também pode ser aplicada à contagem de número de indivíduos em plantios florestais.</p>
+                <a href="3_6_PRODUTOS_SilvaSurvey.html" class="btn">Ler mais sobre SilvaSurvey</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="card-container">
+        <div class="card" style="background-image: url('images/dsm3.png');">
+            <div class="card-content">
+                <h2>SilvaBase </h2>
+                <p>Ferramenta para geração de modelos detalhados de elevação e cobertura florestal, incluindo o Modelo de Altura de Copa (CHM), o Modelo Digital de Terreno (DTM) e o Modelo Digital de Superfície (DSM).</p>
+                <a href="3_7_PRODUTOS_SilvaBase.html" class="btn">Ler mais sobre SilvaBase</a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/growth.png');">
+            <div class="card-content">
+                <h2>SilvaGrowth </h2>
+                <p>Ferramenta para a modelagem de Site Index e projeção do crescimento florestal, utilizando dados LiDAR. Ainda é possível simular cenários de crescimento a longo prazo, permitindo prever o desenvolvimento florestal e realizar análises comparativas entre diferentes práticas de manejo.</p>
+                <a href="3_8_PRODUTOS_SilvaGrowth.html" class="btn">Ler mais sobre SilvaGrowth </a>
+            </div>
+        </div>
+        <div class="card" style="background-image: url('images/risco3.png');">
+            <div class="card-content">
+                <h2>SilvaService              </h2>
+                <p>Ferramenta projetada para avaliar os serviços ambientais fornecidos por áreas florestais, como sequestro de carbono, regulação hídrica, conservação da biodiversidade e proteção contra a erosão do solo.</p>
+                <a href="3_9_PRODUTOS_SilvaService.html" class="btn">Ler mais sobre SilvaService</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+<div class="main2"></div>
+       <div class="content" style="margin-top: 20px; text-align: center; font-family: Avenir, sans-serif; font-size: 14px;color: white;">
+    <h1 class="center" style="font-size: 24px;">SILVAGEOTECH SOLUTIONS</h1>
+    <p class="center">
+        Rua Jose Gineste n. 2522 - Curitiba - Paraná - Brasil - CEP 80.000-000<br>
+        E-mail: silvageotech@gmail.com <br>
+        Fone: +55 (41) 9999-9999
+    </p>
+</div>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para garantir que a página ocupe toda a altura */
+        body, html {
+            height: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Contêiner principal que ocupa toda a tela */
+        .container {
+            position: relative;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Garante espaço entre os elementos (vídeo e fim da página) */
+        }
+        </style>
+</head>
+
+<head></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato via WhatsApp</title>
+    <style>
+        /* Estilo para o botão do WhatsApp */
+        .whatsapp-button {
+            position: absolute;
+            right: 20px; /* Alinha o botão à direita */
+            top: 50%; /* Posiciona o botão no meio da página */
+            transform: translateY(-50%); /* Centraliza verticalmente entre o vídeo e o fim da página */
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: Avenir, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            top: -10px; /
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57;
+        }
+
+        /* Estilo para o ícone do WhatsApp (opcional) */
+        .whatsapp-button img {
+            vertical-align: middle;
+            margin-right: 12px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Contêiner principal -->
+    <div class="container">
+        <!-- Botão do WhatsApp -->
+        <a href="https://wa.me/5541999999999" class="whatsapp-button" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" height="20">
+            Fale no WhatsApp
+        </a>
+    </div>
+
+</body>
+
+

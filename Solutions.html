@@ -97,46 +97,6 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
 }
 
-.image-column {
-    position: relative; /* Permite que o botão seja posicionado sobre a imagem */
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Centraliza a imagem */
-    align-items: center; /* Centraliza a imagem */
-}
-
-.image-column img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-    position: absolute; /* Permite posicionar o botão sobre a imagem */
-    bottom: 45px; /* Subindo mais o botão, ajuste conforme necessário */
-    left: 20px; /* Posiciona o botão à esquerda */
-    z-index: 2; /* Garante que o botão fique sobre a imagem */
-}
-
-.overlay-button {
-    padding: 15px 30px; /* Tamanho maior do botão */
-    background-color: transparent; /* Sem fundo */
-    color: white; /* Cor do texto em branco */
-    font-weight: bold;
-    text-decoration: none;
-    border: 2px solid white; /* Borda branca */
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 1.2rem; /* Tamanho maior da fonte */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.overlay-button:hover {
-    background-color: white; /* Fundo branco ao passar o mouse */
-    color: rgb(7, 45, 54); /* Cor do texto ao passar o mouse */
-}
-
 /* FORMATACAO DO BOTAO
 .navbar a.active {
     background-color: #f2f3f2; /* Cor de fundo destacada */
@@ -382,13 +342,13 @@
         <div class="logo">EnviPixel</div>
         <div>
             <a href="Index.html">Home</a>
-            <a href="Solutions.html">Solutions</a>
+            <a href="Solutions.html" class="active">Solutions</a>
             <a href="Events.html">Events</a>
-            <a href="Career.html"class="active" >Career</a>
+            <a href="Career.html" >Career</a>
             <a href="News.html">News</a>
-            <a href="ClientPortal.html">Client Portal</a>
+            <a href="ClientPortal.html">ClientPortal</a>
             <a href="About.html">About</a>
-               
+
         </div>
         <a href="#" class="a:hover">Contact Us</a>
     </div>
@@ -397,17 +357,17 @@
     <div class="content-section">
         <div class="text-column">
             <p class="title">JOIN ENVIPIXEL SOLUTIONS</p>
-            <p class="description">Where we bridge Technology and Nature for a Sustainable Future </p>
-           <p class="description"> Would you like to join our journey? <a href="SEU_LINK_AQUI" target="_blank" class="apply-link">Apply here</a></p>
+            <p class="description">Where we bridge Technology and Nature for a Sustainable Future. </p>
+           <p class="description"> Would you like to join our journey? <a href="SEU_LINK_AQUI" target="_blank" class="apply-link">Apply here</a>.</p>
         </div>
 
         <div class="image-column">
             <img src="images/sobre_nos.png" alt="Equipe" />
-            
-            <div class="buttons">
-                <a href="SEU_LINK_AQUI" class="overlay-button">Check Our Open Roles</a>
-            </div>
+            <!-- Botão com hiperlink -->
+            <a href="SEU_LINK_AQUI" class="overlay-button">Clique aqui</a>
         </div>
+
+    </div>
 
 
         <script>
