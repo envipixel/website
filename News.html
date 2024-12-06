@@ -221,7 +221,7 @@
                 border: 2px solid white;
                 border-radius: 5px;
                 text-decoration: none;
-                color: white;
+                color: rgb(36, 37, 59);
                 font-weight: bold;
                 transition: background-color 0.3s, color 0.3s;
                 margin-bottom: 50px;
@@ -353,21 +353,247 @@
         <a href="#" class="a:hover">Contact Us</a>
     </div>
 
-    
-    <div class="content-section">
-        <div class="text-column">
-            <p class="title">JOIN ENVIPIXEL SOLUTIONS</p>
-            <p class="description">Where we bridge Technology and Nature for a Sustainable Future. </p>
-           <p class="description"> Would you like to join our journey? <a href="SEU_LINK_AQUI" target="_blank" class="apply-link">Apply here</a>.</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: rgb(7, 45, 54);
+        }
+
+        .header p {
+            color: #6c757d;
+            font-size: 1.2rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-card {
+            background: rgba(47, 108, 125, 0.726);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(47, 108, 125, 0.726);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .blog-title {
+            font-size: 1.5rem;
+            color:rgb(7, 45, 54);
+            margin-bottom: 10px;
+        }
+
+        .blog-description {
+            font-size: 1rem;
+            color: rgb(7, 45, 54);
+        }
+
+        .blog-footer {
+            font-size: 0.9rem;
+            color: rgb(7, 45, 54)e;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>News from ENVIPIXEL</h1>
+            <p> </p>
         </div>
 
-        <div class="image-column">
-            <img src="images/sobre_nos.png" alt="Equipe" />
-            <!-- Botão com hiperlink -->
-            <a href="SEU_LINK_AQUI" class="overlay-button">Clique aqui</a>
-        </div>
+       
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Standardized Blog Layout</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    margin: 0;
+                    padding: 0;
+                    background-color: #f8f9fa;
+                }
+        
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }
+        
+                .header {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+        
+                .header h1 {
+                    font-size: 2.5rem;
+                    color: #1b3c34;
+                }
+        
+                .header p {
+                    color: #6c757d;
+                    font-size: 1.2rem;
+                }
+        
+                .blog-grid {
+                    display: flex;
+                    gap: 20px;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+        
+                .blog-card {
+                    flex: 1 1 300px; /* Define largura mínima dos cartões */
+                    max-width: 350px; /* Define largura máxima dos cartões */
+                    display: flex;
+                    flex-direction: column; /* Organiza verticalmente */
+                    background-color: #ffffff;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    overflow: hidden;
+                }
+        
+                .blog-image {
+                    height: 200px; /* Altura fixa para todas as imagens */
+                    width: 100%;
+                    object-fit: cover; /* Ajusta a imagem para ocupar o espaço */
+                }
+        
+                .blog-content {
+                    flex-grow: 1; /* Faz com que a área de texto ocupe o espaço disponível */
+                    padding: 15px;
+                    background-color: #90A4AE; /* Cor de fundo para o texto */
+                }
+        
+                .blog-title {
+                    font-size: 1.5rem;
+                    color: rgb(7, 45, 54);
+                    margin-bottom: 10px;
+                }
+        
+                .blog-description {
+                    font-size: 1rem;
+                    color: rgb(7, 45, 54);
+                    margin-bottom: 20px;
+                }
+        
+                .blog-footer {
+                    font-size: 0.9rem;
+                    color: white;
+                    margin-top: 10px;
+                }
+        
+                .read-more {
+                    text-align: right;
+                    margin-top: 10px;
+                }
+        
+                .read-more a {
+                    text-decoration: none;
+                    color: WHITE;
+                    font-weight: bold;
+                    background-color:rgb(7, 45, 54);
+                    padding: 8px 12px;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                }
+        
+                .read-more a:hover {
+                    background-color: #28523b;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="header">
+                </div>
+        
+                <div class="blog-grid">
+                    <!-- Card 1 -->
+                    <div class="blog-card">
+                        <img class="blog-image" src="images/FIRE5.png" alt="Blog Image 1">
+                        <div class="blog-content">
+                            <h2 class="blog-title">NEWS 1</h2>
+                            <p class="blog-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse at velit justo.</p>
+                            <div class="read-more">
+                                <a href="https://example.com/report1" target="_blank">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 2 -->
+                    <div class="blog-card">
+                        <img class="blog-image" src="images/FIRE5.png" alt="Blog Image 2">
+                        <div class="blog-content">
+                            <h2 class="blog-title">NEWS 2</h2>
+                            <p class="blog-description">Vestibulum faucibus sapien eu dolor egestas, et ultricies mauris tristique.</p>
+                            <div class="read-more">
+                                <a href="https://example.com/report2" target="_blank">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Card 3 -->
+                    <div class="blog-card">
+                        <img class="blog-image" src="images/FIRE5.png" alt="Blog Image 3">
+                        <div class="blog-content">
+                            <h2 class="blog-title">NEWS 3</h2>
+                            <p class="blog-description">Curabitur aliquet quam id dui posuere blandit. Proin eget tortor risus.</p>
+                            <div class="read-more">
+                                <a href="https://example.com/report3" target="_blank">Read more...</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>
+        
 
-    </div>
+
+
+
 
 
         <script>
