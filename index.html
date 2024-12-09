@@ -1,240 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnviPixel: Innovative Mapping for Conservation & Sustainability</title>
-        <style>
-
-.navbar a.active {
-    background-color: #f2f3f2; /* Cor de fundo destacada */
-    color: rgb(7, 45, 54);             /* Cor do texto */
-    padding: 5px 17px;       /* Adiciona espaçamento ao botão */
-    border-radius: 5px;       /* Deixa os cantos arredondados */
-    font-weight: bold;        /* Destaca o texto */
-    text-transform: capitalize; /* Coloca o texto em maiúsculas (opcional) */
-}
-            /* General styles */
-            body, html {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-            }
-
-            /* Navbar styles */
-            .navbar {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 15px 30px;
-                background-color: rgb(7, 45, 54); /* Light green/white tone */
-                border-bottom: 1px solid white;
-                position: relative; /* Ensure logo can overlay this */
-                z-index: 1;
-            }
-
-            .navbar .logo {
-                font-size: 1.5rem;
-                font-weight: bold;
-                color: white;
-            }
-
-            .navbar a {
-                text-decoration: none;
-                color: white;
-                font-weight: 600;
-                margin-left: 15px;
-            }
-
-            .navbar .cta {
-                background-color: #273b2a; /* Bright green button color */
-                padding: 10px 30px;
-                color: white;
-                border-radius: 5px;
-                font-weight: bold;
-                text-decoration: none;
-                white-space: nowrap;
-            }
-
-            /* Hero section styles */
-            .hero {
-                position: relative;
-                height: 100vh;
-                overflow: hidden; /* Prevents the video from overflowing */
-            }
-
-            /* Video background */
-            .hero video {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover; /* Ensures the video covers the entire area */
-                z-index: -1; /* Sends the video behind the content */
-            }
-
-            .hero-overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.3); /* Transparent dark overlay */
-            }
-
-            .hero-content {
-                position: absolute;
-                margin-top: 70px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: left;
-                color: white;
-                width: 50%;
-            }
-
-            .hero-content h1 {
-                font-size: 3rem;
-                margin-bottom: 10px;
-                margin-top: 300px;
-                font-weight: bold;
-                text-align: center;
-            }
-
-            .hero-content p {
-                font-size: 1.2rem;
-                margin-bottom: 30px;
-                font-weight: 500;
-                text-align: center;
-            }
-
-            .hero-content .buttons {
-                display: flex;
-                gap: 15px;
-                justify-content: center; /* Centers items horizontally */
-                align-items: center; /* Centers items vertically */
-                width: 100%; /* Ensures the buttons container takes the full width */
-            }
-
-            .hero-content .buttons a {
-                padding: 10px 20px;
-                border: 2px solid white;
-                border-radius: 5px;
-                text-decoration: none;
-                color: white;
-                font-weight: bold;
-                transition: background-color 0.3s, color 0.3s;
-                margin-bottom: 50px;
-            }
-
-            .hero-content .buttons a.cta-green {
-                background-color: gray; /* Green color for "Connect" button */
-                border: none;
-            }
-
-            .hero-content .buttons a:hover {
-                background-color: white;
-                color: rgb(7, 45, 54);
-            }
-
-            /* Logo Image styles */
-            .hero .logo-image {
-                position: absolute;
-                top: 20px; /* Adjust this as needed */
-                left: 50%;
-                transform: translateX(-50%);
-                width: 350px; /* Adjust the size */
-                z-index: 2; /* Ensure it appears above both navbar and hero */
-            }
-
-    /* Subscription box styles */
-    .subscription-box {
-        background-color: transparent;
-        padding: 5px;  /* Reduced padding to make the box smaller */
-        max-width: 500px;
-        margin: 0px auto;
-        border-radius: 8px;
-       /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
-        text-align: center;
-        height: auto;  /* Let the height adjust automatically based on content */
-    }
-
-    .subscription-box h2 {
-        font-size: 1.5rem; /* Reduced font size */
-        margin-bottom: 10px; /* Reduced space between heading and input */
-    }
-
-    .subscription-box p {
-        font-size: 1rem; /* Reduced font size */
-        margin-bottom: 0px; /* Reduced space between paragraph and form */
-    }
-
-    .subscription-form {
-        display: flex;
-        justify-content: center; /* Center the items horizontally */
-        align-items: center;     /* Align items vertically */
-        gap: 10px;               /* Space between email input and subscribe button */
-    }
-
-    .subscription-box input[type="email"] {
-        width: 70%;              /* 70% width for the input field */
-        padding: 8px;            /* Reduced padding for a smaller input field */
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    .subscription-box button {
-        padding: 8px 15px;       /* Adjust button padding to match smaller height */
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .subscription-box button:hover {
-        background-color: #45a049;
-    }
-
-    .error-message {
-        color: red;
-        font-size: 12px;  /* Reduced font size of error message */
-        text-align: center;
-        margin-top: 10px;
-    }
-                        .social-icons {
-                            font-size: 2em;
-                            display: flex;
-                            justify-content: center; /* Centers items horizontally */
-                            align-items: center; /* Centers items vertically */
-                            gap: 30px;
-                            width: 100px;
-                            margin-top: 0px;
-                            margin-left: 100px;
-                        }
-            
-                        .social-icons a {
-                            color: white;
-                            text-decoration: none;
-                            margin-left: 0px;
-                        }
-                        .social-icons a:hover {
-                            color: #d1d1d1;
-                        }
-                        body {
-                            background-color: rgb(108, 136, 110);
-                            color: #ffffff;
-                            margin-left: 0px;
-                        }
-
-
-    </style>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
-   
+
     <!-- Navbar -->
-    <div class="navbar">
+    <header class="navbar">
         <div class="logo">EnviPixel</div>
         <div>
             <a href="Index.html" class="active">Home</a>
@@ -245,16 +23,17 @@
             <a href="ClientPortal.html">Client Portal</a>
             <a href="About.html">About</a>
 
-            
+
         </div>
         <a href="#" class="a:hover">Contact Us</a>
-    </div>
+    </header>
 
     <!-- Hero Section with Video Background -->
     <div class="hero">
         <!-- Overlay Logo Image -->
-        <img src="images/logo_trans5.png" alt="EnviPixel Logo" class="logo-image"> <!-- Replace with your logo image path -->
-        
+        <img src="images/logo_trans5.png" alt="EnviPixel Logo" class="logo-image">
+        <!-- Replace with your logo image path -->
+
         <!-- Background Video -->
         <video autoplay muted loop>
             <source src="videos/DTM_viz.mp4" type="video/mp4"> <!-- Replace with your video URL -->
@@ -272,44 +51,36 @@
                 <a href="#">CHECK OUT OUR SOLUTIONS</a>
             </div>
 
-        
-        <script>
-            function subscribeUser(event) {
-                event.preventDefault(); // Prevent form submission to allow validation
-        
-                const emailInput = document.getElementById('email');
-                const errorMessage = document.getElementById('error-message');
-                const email = emailInput.value.trim();
-        
-                // Validate email format
-                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                if (!emailRegex.test(email)) {
-                    errorMessage.textContent = "Please enter a valid email address.";
-                    return false; // Stop form submission
+
+            <script>
+                function subscribeUser(event) {
+                    event.preventDefault(); // Prevent form submission to allow validation
+
+                    const emailInput = document.getElementById('email');
+                    const errorMessage = document.getElementById('error-message');
+                    const email = emailInput.value.trim();
+
+                    // Validate email format
+                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    if (!emailRegex.test(email)) {
+                        errorMessage.textContent = "Please enter a valid email address.";
+                        return false; // Stop form submission
+                    }
+
+                    // Simulate successful subscription
+                    errorMessage.textContent = "";
+                    alert('Thank you for subscribing with email: ' + email);
+                    emailInput.value = ''; // Clear input field
+                    return true; // Proceed with form submission
                 }
-        
-                // Simulate successful subscription
-                errorMessage.textContent = "";
-                alert('Thank you for subscribing with email: ' + email);
-                emailInput.value = ''; // Clear input field
-                return true; // Proceed with form submission
-            }
-        </script>
-        
-     
-  
+            </script>
+
+
+
         </div>
     </div>
-    <head>
-        <div class="navbar">
-      
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Social Media Links</title>
-            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-       
-        </head>
-    
+
+    <footer class="navbar">
         <div class="subscription-box">
             <h2 style="text-align:left;">Connect with us on Social Media</h2>
             <div class="social-icons">
@@ -326,12 +97,12 @@
                     <i class="fab fa-twitter"></i>
                 </a>
             </div>
-            </div>
-            
-            <h5 style="text-align:center;margin-top: 50px">© 2024 EnviPixel. All rights reserved.</h5>
- 
-            <!-- Stay Up To Date Subscription Box -->
-    <!-- Stay Up To Date Subscription Box -->
+        </div>
+
+        <h5 style="text-align:center;margin-top: 50px">© 2024 EnviPixel. All rights reserved.</h5>
+
+        <!-- Stay Up To Date Subscription Box -->
+        <!-- Stay Up To Date Subscription Box -->
         <div class="subscription-box">
             <h2>Stay Up To Date</h2>
             <p>Enter your email to subscribe to our newsletter:</p>
@@ -343,12 +114,7 @@
                 <div class="error-message" id="error-message"></div>
             </form>
         </div>
-     
-        </div>
-        
-    </div>
-    
-</div> 
-      
-</body>     
+    </footer>
+</body>
+
 </html>

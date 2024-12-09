@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar a.active {
+    background-color: #f2f3f2;
+    /* Cor de fundo destacada */
+    color: rgb(7, 45, 54);
+    /* Cor do texto */
+    padding: 5px 17px;
+    /* Adiciona espaçamento ao botão */
+    border-radius: 5px;
+    /* Deixa os cantos arredondados */
+    font-weight: bold;
+    /* Destaca o texto */
+    text-transform: capitalize;
+    /* Coloca o texto em maiúsculas (opcional) */
+}
+
+/* General styles */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(7, 45, 54);
+    /* Light green/white tone */
+    border-bottom: 1px solid white;
+    position: relative;
+    /* Ensure logo can overlay this */
+    z-index: 1;
+}
+
+header {
+    grid-area: navbar;
+}
+
+footer .navbar {
+    grid-area: footer;
+    justify-content: space-around;
+    align-items: end;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-left: 15px;
+}
+
+.navbar .cta {
+    background-color: #273b2a;
+    /* Bright green button color */
+    padding: 10px 30px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Hero section styles */
+.hero {
+    position: relative;
+    overflow: hidden;
+    grid-area: content;
+    /* Prevents the video from overflowing */
+}
+
+/* Video background */
+.hero video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    /* Ensures the video covers the entire area */
+    z-index: -1;
+    /* Sends the video behind the content */
+}
+
+#hero-container {
+    position: relative;
+    /* Ensures the container is positioned relative to the hero */
+    height: 100%;
+    /* Full height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* Centers the content vertically and horizontally */
+    text-align: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Transparent dark overlay */
+}
+
+.hero-content {
+    height: 100%;
+    color: white;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.hero-content .buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Centers items vertically */
+    width: 100%;
+    /* Ensures the buttons container takes the full width */
+}
+
+.hero-content .buttons a {
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 50px;
+}
+
+.hero-content .buttons a.cta-green {
+    background-color: gray;
+    /* Green color for "Connect" button */
+    border: none;
+}
+
+.hero-content .buttons a:hover {
+    background-color: white;
+    color: rgb(7, 45, 54);
+}
+
+/* Logo Image styles */
+.hero .logo-image {
+    width: 350px;
+    /* Adjust the size */
+    z-index: 2;
+    /* Ensure it appears above both navbar and hero */
+}
+
+/* Subscription box styles */
+.subscription-box {
+    display: flex;
+    background-color: transparent;
+    padding: 5px;
+    /* Reduced padding to make the box smaller */
+    max-width: 500px;
+    height: 100%;
+    margin: 0px auto;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    /* Let the height adjust automatically based on content */
+}
+
+.subscription-box h2 {
+    font-size: 1.5rem;
+    /* Reduced font size */
+    margin-bottom: 10px;
+    /* Reduced space between heading and input */
+}
+
+.subscription-box p {
+    font-size: 1rem;
+    /* Reduced font size */
+    margin-bottom: 0px;
+    /* Reduced space between paragraph and form */
+}
+
+.subscription-form {
+    display: flex;
+    justify-content: center;
+    /* Center the items horizontally */
+    align-items: center;
+    /* Align items vertically */
+    gap: 10px;
+    /* Space between email input and subscribe button */
+}
+
+.subscription-box input[type="email"] {
+    width: 70%;
+    /* 70% width for the input field */
+    padding: 8px;
+    /* Reduced padding for a smaller input field */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.subscription-box button {
+    padding: 8px 15px;
+    /* Adjust button padding to match smaller height */
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.subscription-box button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    /* Reduced font size of error message */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.social-icons {
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    /* Centers items horizontally */
+    align-items: center;
+    /* Centers items vertically */
+    gap: 30px;
+    width: 100px;
+    margin-top: 0px;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0px;
+}
+
+.social-icons a:hover {
+    color: #d1d1d1;
+}
+
+body {
+    background-color: rgb(108, 136, 110);
+    color: #ffffff;
+    margin: 0px;
+    display: grid;
+    grid-template-rows: 58px 1fr 143px;
+    /* Navbar, content, footer */
+    grid-template-areas:
+        "navbar"
+        "content"
+        "footer";
+    ;
+}
