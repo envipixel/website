@@ -17,7 +17,7 @@
     <header class="navbar">
         <div class="logo">EnviPixel</div>
         <div class="nav-items">
-            <div class="menu-button">
+            <div id="menu-button">
                 <span class="material-symbols-outlined">
                     menu
                 </span>
@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <div class="navbar nav-items2">
+    <div class="navbar nav-items2 hidden">
         <div class="items-menu">
             <a href="Index.html" class="active">Home</a>
             <a href="Solutions.html">Solutions</a>
@@ -147,8 +147,9 @@
 
 
     <script>
-        document.querySelector('.menu-button').onclick = function () { document.querySelector(".nav-items2").classList.toggle('hidden') };
-    </script>
+        document.querySelector('#menu-button').onclick = function () { document.querySelector(".nav-items2").classList.toggle('hidden') };
+        document.querySelector('body > div.navbar.nav-items2 > div').onmouseleave = function (s, e) { document.querySelector(".nav-items2").classList.add('hidden'); console.log("entrou!"); }; 
+    </script> 
 </body>
 
 

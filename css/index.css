@@ -48,7 +48,7 @@ header {
     grid-area: navbar;
 }
 
-.nav-items > div {
+.nav-items>div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +124,7 @@ footer .navbar {
     /* Centers the content vertically and horizontally */
     text-align: center;
     color: white;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .hero-overlay {
@@ -139,7 +139,7 @@ footer .navbar {
 }
 
 .hero-content {
-    height: 50%; 
+    height: 50%;
     color: white;
     width: 100%;
     display: flex;
@@ -207,7 +207,7 @@ footer .navbar {
     max-height: 50%;
     /* Adjust the size */
     /* Ensure it appears above both navbar and hero */
-    z-index:2;
+    z-index: 2;
 }
 
 /* Subscription box styles */
@@ -320,43 +320,71 @@ body {
     position: absolute;
 }
 
+#menu-button {
+    display: none;
+}
+
+.items-menu>a {
+    padding: 15px 0;
+    margin: -15px 0;
+}
+
+.items-menu>a:hover {
+    color: #d1d1d1;
+}
+
 /* For small media */
 @media screen and (max-width: 600px) {
     .navbar h2 {
-        display: none; 
+        display: none;
     }
 
     header {
         max-height: 50px;
     }
 
-    .nav-items {
+    .nav-items .items-menu {
         display: none;
-    } 
+    }
 
-    .nav-items > div {
-        position: absolute;
+    .nav-items2>.items-menu {
+        display: flex;
         overflow: hidden;
-        transform: translateX(-50%);
         flex-direction: column;
         padding: 20px;
-        margin-top: 25px;
+        margin-top: 35px;
+        padding-bottom: 10px;
         background-color: rgb(7, 45, 54);
         justify-content: start;
         align-self: start;
-        align-items: center ;
+        align-items: center;
         text-align: center;
-        width: fit-content;       
-    } 
+    }
 
-    .nav-items.hidden {
-        transform: translateY(-100px);
-    
+    .nav-items2 > .items-menu > a {
+        display: flex;
+        width: 100%;
+        margin: 0px;
+        padding: 10px;
+        text-decoration: none;
+    }
+
+
+    .nav-items2.hidden {
+        transform: translateY(-100%);
     }
 
     .nav-items2 {
         display: flex;
-        top: 0;
-        left: 0;
+        min-width: 100vw;
+        justify-content: center;
+        background-color: #0000;
+        border: none;
+        transition: all 0.5s;
     }
+
+    #menu-button {
+        display: flex;
+    }
+
 }
