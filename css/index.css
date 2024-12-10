@@ -27,6 +27,11 @@ html {
 }
 
 /* Navbar styles */
+header {
+    gap: 40px;
+    z-index: 5;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -36,12 +41,24 @@ html {
     /* Light green/white tone */
     border-bottom: 1px solid white;
     position: relative;
-    /* Ensure logo can overlay this */
-    z-index: 1;
+    width: 100%;
 }
 
 header {
     grid-area: navbar;
+}
+
+.nav-items > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+}
+
+#contact-us {
+    min-width: fit-content;
 }
 
 footer .navbar {
@@ -60,7 +77,6 @@ footer .navbar {
     text-decoration: none;
     color: white;
     font-weight: 600;
-    margin-left: 15px;
 }
 
 .navbar .cta {
@@ -79,6 +95,8 @@ footer .navbar {
     position: relative;
     overflow: hidden;
     grid-area: content;
+    height: 100%;
+    z-index: -1;
     /* Prevents the video from overflowing */
 }
 
@@ -91,7 +109,6 @@ footer .navbar {
     height: 50%;
     object-fit: cover;
     /* Ensures the video covers the entire area */
-    z-index: -1;
     /* Sends the video behind the content */
 }
 
@@ -107,6 +124,7 @@ footer .navbar {
     /* Centers the content vertically and horizontally */
     text-align: center;
     color: white;
+    overflow:hidden;
 }
 
 .hero-overlay {
@@ -116,29 +134,32 @@ footer .navbar {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
+    z-index: 0;
     /* Transparent dark overlay */
 }
 
 .hero-content {
-    height: 100%;
+    height: 50%; 
     color: white;
-    width: 50%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
+    flex-shrink: 1;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+    font-size: min(5.9vw, 2.5rem);
+    margin: 0px;
     font-weight: bold;
     text-align: center;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+    font-size: min(3.1vw, 1.2rem);
+    margin: 0px;
     font-weight: 500;
     text-align: center;
 }
@@ -161,8 +182,8 @@ footer .navbar {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    font-size: min(2.9vw, 1rem);
     transition: background-color 0.3s, color 0.3s;
-    margin-bottom: 50px;
 }
 
 .hero-content .buttons a.cta-green {
@@ -176,12 +197,17 @@ footer .navbar {
     color: rgb(7, 45, 54);
 }
 
+#logo-container {
+    max-height: 100%;
+}
+
 /* Logo Image styles */
 .hero .logo-image {
-    width: 350px;
+    max-width: 350px;
+    max-height: 50%;
     /* Adjust the size */
-    z-index: 2;
     /* Ensure it appears above both navbar and hero */
+    z-index:2;
 }
 
 /* Subscription box styles */
@@ -283,12 +309,54 @@ body {
     background-color: rgb(108, 136, 110);
     color: #ffffff;
     margin: 0px;
-    display: grid;
-    grid-template-rows: 58px 1fr 143px;
+    display: flex;
+    flex-direction: column;
     /* Navbar, content, footer */
-    grid-template-areas:
-        "navbar"
-        "content"
-        "footer";
-    ;
+    justify-content: stretch;
+}
+
+.nav-items2 {
+    display: none;
+    position: absolute;
+}
+
+/* For small media */
+@media screen and (max-width: 600px) {
+    .navbar h2 {
+        display: none; 
+    }
+
+    header {
+        max-height: 50px;
+    }
+
+    .nav-items {
+        display: none;
+    } 
+
+    .nav-items > div {
+        position: absolute;
+        overflow: hidden;
+        transform: translateX(-50%);
+        flex-direction: column;
+        padding: 20px;
+        margin-top: 25px;
+        background-color: rgb(7, 45, 54);
+        justify-content: start;
+        align-self: start;
+        align-items: center ;
+        text-align: center;
+        width: fit-content;       
+    } 
+
+    .nav-items.hidden {
+        transform: translateY(-100px);
+    
+    }
+
+    .nav-items2 {
+        display: flex;
+        top: 0;
+        left: 0;
+    }
 }

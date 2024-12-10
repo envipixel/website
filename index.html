@@ -7,6 +7,8 @@
     <title>EnviPixel: Innovative Mapping for Conservation & Sustainability</title>
     <link rel="stylesheet" href="css/index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu" />
 </head>
 
 <body>
@@ -14,7 +16,31 @@
     <!-- Navbar -->
     <header class="navbar">
         <div class="logo">EnviPixel</div>
-        <div>
+        <div class="nav-items">
+            <div class="menu-button">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+            <div class="items-menu">
+                <a href="Index.html" class="active">Home</a>
+                <a href="Solutions.html">Solutions</a>
+                <a href="Events.html">Events</a>
+                <a href="Career.html">Career</a>
+                <a href="News.html">News</a>
+                <a href="ClientPortal.html">Client Portal</a>
+                <a href="About.html">About</a>
+            </div>
+
+        </div>
+
+        <div id="contact-us">
+            <a href="#" class="a:hover">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="navbar nav-items2">
+        <div class="items-menu">
             <a href="Index.html" class="active">Home</a>
             <a href="Solutions.html">Solutions</a>
             <a href="Events.html">Events</a>
@@ -22,61 +48,64 @@
             <a href="News.html">News</a>
             <a href="ClientPortal.html">Client Portal</a>
             <a href="About.html">About</a>
-
-
         </div>
-        <a href="#" class="a:hover">Contact Us</a>
-    </header>
+
+    </div>
 
     <!-- Hero Section with Video Background -->
     <div class="hero">
-        <!-- Overlay Logo Image -->
-        <img src="images/logo_trans5.png" alt="EnviPixel Logo" class="logo-image">
-        <!-- Replace with your logo image path -->
 
         <!-- Background Video -->
         <video autoplay muted loop>
             <source src="videos/DTM_viz.mp4" type="video/mp4"> <!-- Replace with your video URL -->
         </video>
 
-        <!-- Overlay -->
+
         <div class="hero-overlay"></div>
 
-        <!-- Hero Content -->
-        <div class="hero-content">
-            <h1>EnviPixel Solutions</h1>
-            <p>Bridging Technology and Nature for a Sustainable Future</p>
-            <div class="buttons">
-                <a href="#" class="cta-green">CONNECT WITH US</a>
-                <a href="#">CHECK OUT OUR SOLUTIONS</a>
-            </div>
 
 
-            <script>
-                function subscribeUser(event) {
-                    event.preventDefault(); // Prevent form submission to allow validation
+        <!-- Overlay Logo Image -->
+        <div id="hero-container">
+            <img src="images/logo_trans5.png" alt="EnviPixel Logo" class="logo-image">
+            <!-- Replace with your logo image path -->
+            <!-- Overlay -->
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1>EnviPixel Solutions</h1>
+                <p>Bridging Technology and Nature for a Sustainable Future</p>
+                <div class="buttons">
+                    <a href="#" class="cta-green">CONNECT WITH US</a>
+                    <a href="#">CHECK OUT OUR SOLUTIONS</a>
+                </div>
 
-                    const emailInput = document.getElementById('email');
-                    const errorMessage = document.getElementById('error-message');
-                    const email = emailInput.value.trim();
 
-                    // Validate email format
-                    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                    if (!emailRegex.test(email)) {
-                        errorMessage.textContent = "Please enter a valid email address.";
-                        return false; // Stop form submission
+                <script>
+                    function subscribeUser(event) {
+                        event.preventDefault(); // Prevent form submission to allow validation
+
+                        const emailInput = document.getElementById('email');
+                        const errorMessage = document.getElementById('error-message');
+                        const email = emailInput.value.trim();
+
+                        // Validate email format
+                        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                        if (!emailRegex.test(email)) {
+                            errorMessage.textContent = "Please enter a valid email address.";
+                            return false; // Stop form submission
+                        }
+
+                        // Simulate successful subscription
+                        errorMessage.textContent = "";
+                        alert('Thank you for subscribing with email: ' + email);
+                        emailInput.value = ''; // Clear input field
+                        return true; // Proceed with form submission
                     }
-
-                    // Simulate successful subscription
-                    errorMessage.textContent = "";
-                    alert('Thank you for subscribing with email: ' + email);
-                    emailInput.value = ''; // Clear input field
-                    return true; // Proceed with form submission
-                }
-            </script>
+                </script>
 
 
 
+            </div>
         </div>
     </div>
 
@@ -115,6 +144,12 @@
             </form>
         </div>
     </footer>
+
+
+    <script>
+        document.querySelector('.menu-button').onclick = function () { document.querySelector(".nav-items2").classList.toggle('hidden') };
+    </script>
 </body>
+
 
 </html>
