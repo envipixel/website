@@ -203,6 +203,7 @@ footer .navbar {
 
 /* Logo Image styles */
 .hero .logo-image {
+    position: relative;
     max-width: 350px;
     max-height: 50%;
     /* Adjust the size */
