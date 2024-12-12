@@ -6,146 +6,19 @@
     <title>EnviPixel: Innovative Mapping for Conservation & Sustainability</title>
         <style>
 
-
-/* Content section styles */
-.content-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 30px; /* Espaçamento ao redor da seção */
-    background-color: #ffffff; /* Fundo branco */
-    font-family: Arial, sans-serif;
-}
-
-/* Estilo básico para a barra de navegação */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #333;
-}
-
-.navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 7px 13px;
-    border-radius: 5px; /* Cantos arredondados */
-    transition: background-color 0.3s ease;
-}
-
-.navbar a:hover {
-    background-color: #575757;
-}
-
-/* Estilo para o link ativo */
 .navbar a.active {
-    background-color: white; /* Cor de destaque para o link ativo */
-    color: rgb(7, 45, 54); /* Cor do texto quando ativo */
-    font-weight: bold; /* Torna o texto mais forte */
+    background-color: #f2f3f2; /* Cor de fundo destacada */
+    color: rgb(7, 45, 54);             /* Cor do texto */
+    padding: 5px 17px;       /* Adiciona espaçamento ao botão */
+    border-radius: 5px;       /* Deixa os cantos arredondados */
+    font-weight: bold;        /* Destaca o texto */
+    text-transform: capitalize; /* Coloca o texto em maiúsculas (opcional) */
 }
-
-/* Estilo para o logo */
-.navbar .logo {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-}
-/* Estilo para o título */
-.title {
-    font-size: 2rem; /* Tamanho maior para o título */
-    font-weight: bold; /* Negrito */
-    color: rgb(7, 45, 54); /* Cor do texto */
-    text-align: center; /* Centraliza o título */
-    margin-bottom: 20px; /* Espaçamento inferior */
-    font-family: Arial, sans-serif;
-}
-
-/* Estilo para o link */
-.apply-link {
-    color: rgb(7, 45, 54); /* Cor do link */
-    font-weight: bold; /* Negrito no link */
-    text-decoration: text-decoration-line; /* Remove o sublinhado */
-    font-family: Arial, sans-serif;
-}
-
-.apply-link:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-    font-family: Arial, sans-serif;
-}
-
-/* Estilo para a descrição */
-.description {
-    font-size: 1.8rem; /* Tamanho menor para o texto */
-    color: rgb(7, 45, 54); /* Cor do texto */
-    text-align: center; /* Centraliza a descrição */
-    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
-    font-family: Arial, sans-serif;
-}
-
-.image-column {
-    flex: 1; /* Faz a coluna ocupar metade do espaço */
-    padding: 20px;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-}
-
-.image-column img {
-    max-width: 100%; /* Garante que a imagem não ultrapasse os limites da coluna */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 10px; /* Deixa os cantos arredondados */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra elegante */
-}
-
-.image-column {
-    position: relative; /* Permite que o botão seja posicionado sobre a imagem */
-    flex: 1;
-    display: flex;
-    justify-content: center; /* Centraliza a imagem */
-    align-items: center; /* Centraliza a imagem */
-}
-
-.image-column img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.buttons {
-    position: absolute; /* Permite posicionar o botão sobre a imagem */
-    bottom: 45px; /* Subindo mais o botão, ajuste conforme necessário */
-    left: 20px; /* Posiciona o botão à esquerda */
-    z-index: 2; /* Garante que o botão fique sobre a imagem */
-}
-
-.overlay-button {
-    padding: 15px 30px; /* Tamanho maior do botão */
-    background-color: transparent; /* Sem fundo */
-    color: white; /* Cor do texto em branco */
-    font-weight: bold;
-    text-decoration: none;
-    border: 2px solid white; /* Borda branca */
-    border-radius: 5px;
-    font-family: Arial, sans-serif;
-    font-size: 1.2rem; /* Tamanho maior da fonte */
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.overlay-button:hover {
-    background-color: white; /* Fundo branco ao passar o mouse */
-    color: rgb(7, 45, 54); /* Cor do texto ao passar o mouse */
-}
-
-            /* General styles */
-            body, html {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-            }
 
             /* Navbar styles */
             .navbar {
+                
+                margin-top: 0 px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -167,7 +40,6 @@
                 color: white;
                 font-weight: 600;
                 margin-left: 15px;
-                font-family: Arial, sans-serif;
             }
 
             .navbar .cta {
@@ -178,18 +50,30 @@
                 font-weight: bold;
                 text-decoration: none;
                 white-space: nowrap;
-                font-family: Arial, sans-serif;
             }
 
             /* Hero section styles */
             .hero {
-            display: flex; /* Enables Flexbox */
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            height: 100vh; /* Full viewport height */
-            overflow: hidden; /* Prevents overflow issues */
-            position: relative; /* Ensures elements like video can stack properly */
-        }
+                position: relative;
+                height: 100vh;
+                overflow: hidden; /* Prevents the video from overflowing */
+            }
+
+     /* Video background */
+.hero video {
+   
+    position: absolute;
+    border-top: 5px solid white; /* Sets a 25px white border */
+    border-bottom: 5px solid white; /* Sets a 25px white border */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    z-index: -1; /* Sends the video behind the content */
+    box-sizing: border-box; /* Ensures the border is included in the element's dimensions */
+}
+
 
             .hero-overlay {
                 position: absolute;
@@ -202,43 +86,43 @@
 
             .hero-content {
                 position: absolute;
-                margin-top: 70px;
-                top: 50%;
+                margin-top: 0px;
+                top: 40%;
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: left;
                 color: white;
                 width: 50%;
-                font-family: Arial, sans-serif;
             }
 
             .hero-content h1 {
+
                 font-size: 3rem;
-                margin-bottom: 10px;
-                margin-top: 300px;
+                margin-bottom: 0px;
+                margin-top: 260px;
                 font-weight: bold;
                 text-align: center;
-                font-family: Arial, sans-serif;
             }
 
             .hero-content p {
+
                 font-size: 1.2rem;
-                margin-bottom: 30px;
+                margin-bottom: 10px;
                 font-weight: 500;
                 text-align: center;
-                font-family: Arial, sans-serif;
             }
 
             .hero-content .buttons {
+        
                 display: flex;
                 gap: 15px;
                 justify-content: center; /* Centers items horizontally */
                 align-items: center; /* Centers items vertically */
                 width: 100%; /* Ensures the buttons container takes the full width */
-                font-family: Arial, sans-serif;
             }
 
             .hero-content .buttons a {
+   
                 padding: 10px 20px;
                 border: 2px solid white;
                 border-radius: 5px;
@@ -246,8 +130,7 @@
                 color: white;
                 font-weight: bold;
                 transition: background-color 0.3s, color 0.3s;
-                margin-bottom: 50px;
-                font-family: Arial, sans-serif;
+                margin-bottom: 0px;
             }
 
             .hero-content .buttons a.cta-green {
@@ -256,22 +139,24 @@
             }
 
             .hero-content .buttons a:hover {
+
                 background-color: white;
                 color: rgb(7, 45, 54);
             }
 
             /* Logo Image styles */
             .hero .logo-image {
+
                 position: absolute;
-                top: 20px; /* Adjust this as needed */
+                top: 0px; /* Adjust this as needed */
                 left: 50%;
                 transform: translateX(-50%);
                 width: 350px; /* Adjust the size */
                 z-index: 2; /* Ensure it appears above both navbar and hero */
             }
 
-   /* Subscription box styles */
-   .subscription-box {
+    /* Subscription box styles */
+    .subscription-box {
         background-color: transparent;
         padding: 5px;  /* Reduced padding to make the box smaller */
         max-width: 500px;
@@ -345,6 +230,7 @@
                             color: #d1d1d1;
                         }
                         body {
+                            
                             background-color: white;
                             color: #ffffff;
                             margin-left: 0px;
@@ -352,6 +238,7 @@
                             padding: 0;
                             font-family: Arial, sans-serif;
                         }
+
 
     </style>
 </head>
@@ -361,37 +248,45 @@
     <div class="navbar">
         <div class="logo">EnviPixel</div>
         <div>
-            <a href="Index.html">Home</a>
+            <a href="Index.html" class="active">Home</a>
             <a href="Area.html">Area</a>
             <a href="Solutions.html">Solutions</a>
             <a href="Events.html">Events</a>
-            <a href="Career.html"class="active" >Career</a>
+            <a href="Career.html">Career</a>
             <a href="News.html">News</a>
             <a href="ClientPortal.html">Client Portal</a>
             <a href="About.html">About</a>
-               
+
+            
         </div>
         <a href="#" class="a:hover">Contact Us</a>
     </div>
 
-    
-    <div class="content-section">
-        <div class="text-column">
-            <p class="title">JOIN ENVIPIXEL SOLUTIONS</p>
-            <p class="description">Where we bridge Technology and Nature for a Sustainable Future </p>
-           <p class="description"> Would you like to join our journey? <a href="SEU_LINK_AQUI" target="_blank" class="apply-link">Apply here</a></p>
-        </div>
+    <!-- Hero Section with Video Background -->
+    <div class="hero">
+        <!-- Background Video -->
 
-        <div class="image-column">
-            <img src="images/sobre_nos.png" alt="Equipe" />
-            
-            
+   
+        <video autoplay muted loop>
+               <!-- Overlay -->
+        
+            <source src="videos/DTM_viz.mp4" type="video/mp4"> <!-- Replace with your video URL -->
+        
+        </video>
+              <!-- Overlay Logo Image -->
+              <img src="images/logo_trans5.png" alt="EnviPixel Logo" class="logo-image"> <!-- Replace with your logo image path -->
+        
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>EnviPixel Solutions</h1>
+            <p>Bridging Technology and Nature for a Sustainable Future</p>
             <div class="buttons">
-                <a href="SEU_LINK_AQUI" class="overlay-button">Check Our Open Roles</a>
+                <a href="#" class="cta-green">CONNECT WITH US</a>
+                <a href="#">CHECK OUT OUR SOLUTIONS</a>
             </div>
-        </div>
 
-
+        
         <script>
             function subscribeUser(event) {
                 event.preventDefault(); // Prevent form submission to allow validation
@@ -424,7 +319,7 @@
       
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Social Media Links</title>
+            <!-- <title>Social Media Links</title> -->
             <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
        
         </head>
@@ -447,7 +342,7 @@
             </div>
             </div>
             
-            <h5 style="text-align:center; margin-top: 50px; font-family: Arial, sans-serif;">© 2024 EnviPixel. All rights reserved.</h5>
+            <h5 style="text-align:center;margin-top: 50px">© 2024 EnviPixel. All rights reserved.</h5>
  
             <!-- Stay Up To Date Subscription Box -->
     <!-- Stay Up To Date Subscription Box -->

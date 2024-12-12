@@ -174,60 +174,8 @@
                             margin: 0;
                             padding: 0;
                             font-family: Arial, sans-serif;
-                            box-sizing: border-box;
                         }
-
-.resized-image {
-    width: 100%; /* Adjust based on container */
-    max-width: 1500px; /* Optional: limits maximum width */
-    height: 200px; /* Automatically scales height */
-}
-
-.resized-image_logo {
-    width: 100%; /* Adjust based on container */
-    max-width: 500px; /* Optional: limits maximum width */
-    height: auto; /* Automatically scales height */
-}
-
-.resized-image_solutions {
-    width: 100%; /* Adjust based on container */
-    max-width: 300px; /* Optional: limits maximum width */
-    height: auto; /* Automatically scales height */
-}
-
-.grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            gap: 10px;
-            max-width: 1800px;
-            width: 100%;
-            background-color: red;
-        }
-
-        .grid-container > div {
-            background-color: white;
-            color: gray;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            padding: 20px;
-            border: 2px solid white;
-        }
-
-        .wide {
-            grid-column: span 2;
-        }
-
-        .tall {
-            grid-row: span 2;
-        }
-
-     
-
-</style>
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -235,8 +183,8 @@
         <div class="logo">EnviPixel</div>
         <div>
             <a href="Index.html">Home</a>
-            <a href="Area.html">Area</a>
-            <a href="Solutions.html" class="active">Solutions</a>
+            <a href="Area.html" class="active">Area</a>
+            <a href="Solutions.html">Solutions</a>
             <a href="Events.html">Events</a>
             <a href="Career.html">Career</a>
             <a href="News.html">News</a>
@@ -245,21 +193,20 @@
         </div>
         <a href="#">Contact Us</a>
     </div>
-    <div class="wide"> <img src="images/others/Alapachicola_2021.png" alt="Equipe" class="resized-image" /></div>
-      
-    <div class="grid-container">
-         <div class="tall"><img src="images/others/redd3.png" alt="Equipe" class=".resized-image_solutions" /></div>
-        <div> <img src="images/solutions/sub/carbon_analytic.png" alt="Equipe" class="resized-image_logo" /></div>
-        <div>LiDAR (Light Detection and Ranging) and remote sensing are revolutionary technologies that have transformed the way we study and monitor the Earth's surface and atmosphere. These tools provide scientists, researchers, and industry professionals with precise and detailed data for a wide range of applications, from environmental monitoring to urban planning.</div>
-    </div>
-    
 
-    <div class="grid-container">
-        <div class="tall"><img src="images/others/redd3.png" alt="Equipe" class=".resized-image_solutions" /></div>
-        <div> <img src="images/solutions/sub/carbon_analytic.png" alt="Equipe" class="resized-image_logo" /></div>
-        <div>LiDAR (Light Detection and Ranging) and remote sensing are revolutionary technologies that have transformed the way we study and monitor the Earth's surface and atmosphere. These tools provide scientists, researchers, and industry professionals with precise and detailed data for a wide range of applications, from environmental monitoring to urban planning.</div>
+    <!-- Hero Section with Login Container -->
+    <div class="hero">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form action="redirect.html" method="get">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <input type="submit" value="Login">
+            </form>
+        </div>
     </div>
-    
+
+
 
     <script>
         function subscribeUser(event) {
