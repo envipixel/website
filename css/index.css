@@ -140,7 +140,7 @@ footer .navbar {
 
 .hero-content {
     height: 50%;
-    color: white;
+    color: rgb(32, 31, 31);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -211,6 +211,12 @@ footer .navbar {
     z-index: 2;
 }
 
+.imagepixel {
+     z-index: -1; /* Sends the video behind the content */
+    box-sizing: border-box; /* Ensures the border is included in the element's dimensions */
+ }
+
+ 
 /* Subscription box styles */
 .subscription-box {
     display: flex;
