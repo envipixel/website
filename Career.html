@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EnviPixel: Innovative Mapping for Conservation & Sustainability</title>
+    <title>EnviPixel: Inovação em Mapeamento para a Conservação e Sustentabilidade</title>
         <style>
 
 
@@ -114,18 +114,19 @@
 
 .buttons {
     position: absolute; /* Permite posicionar o botão sobre a imagem */
-    bottom: 45px; /* Subindo mais o botão, ajuste conforme necessário */
-    left: 20px; /* Posiciona o botão à esquerda */
+    bottom: 80px; /* Ajusta a altura para subir mais o botão */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Garante que o botão fique exatamente no centro */
     z-index: 2; /* Garante que o botão fique sobre a imagem */
 }
 
 .overlay-button {
     padding: 15px 30px; /* Tamanho maior do botão */
     background-color: transparent; /* Sem fundo */
-    color: white; /* Cor do texto em branco */
+    color: rgb(213, 96, 10); /* Cor do texto em branco */
     font-weight: bold;
     text-decoration: none;
-    border: 2px solid white; /* Borda branca */
+    border: 2px solid rgb(213, 96, 10); /* Borda branca */
     border-radius: 5px;
     font-family: Arial, sans-serif;
     font-size: 1.2rem; /* Tamanho maior da fonte */
@@ -133,10 +134,20 @@
 }
 
 .overlay-button:hover {
-    background-color: white; /* Fundo branco ao passar o mouse */
-    color: rgb(7, 45, 54); /* Cor do texto ao passar o mouse */
+    background-color: rgb(213, 96, 10); /* Fundo branco ao passar o mouse */
+    color: white; /* Cor do texto ao passar o mouse */
 }
 
+/* FORMATACAO DO BOTAO
+.navbar a.active {
+    background-color: #f2f3f2; /* Cor de fundo destacada */
+    color: rgb(7, 45, 54);             /* Cor do texto */
+    padding: 5px 17px;       /* Adiciona espaçamento ao botão */
+    border-radius: 5px;       /* Deixa os cantos arredondados */
+    font-weight: bold;        /* Destaca o texto */
+    text-transform: capitalize; /* Coloca o texto em maiúsculas (opcional) */
+    font-family: Arial, sans-serif;
+}
             /* General styles */
             body, html {
                 margin: 0;
@@ -183,13 +194,21 @@
 
             /* Hero section styles */
             .hero {
-            display: flex; /* Enables Flexbox */
-            justify-content: center; /* Centers horizontally */
-            align-items: center; /* Centers vertically */
-            height: 100vh; /* Full viewport height */
-            overflow: hidden; /* Prevents overflow issues */
-            position: relative; /* Ensures elements like video can stack properly */
-        }
+                position: relative;
+                height: 100vh;
+                overflow: hidden; /* Prevents the video from overflowing */
+            }
+
+            /* Video background */
+            .hero video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Ensures the video covers the entire area */
+                z-index: -1; /* Sends the video behind the content */
+            }
 
             .hero-overlay {
                 position: absolute;
@@ -270,8 +289,8 @@
                 z-index: 2; /* Ensure it appears above both navbar and hero */
             }
 
-   /* Subscription box styles */
-   .subscription-box {
+    /* Subscription box styles */
+    .subscription-box {
         background-color: transparent;
         padding: 5px;  /* Reduced padding to make the box smaller */
         max-width: 500px;
@@ -280,11 +299,13 @@
        /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);*/
         text-align: center;
         height: auto;  /* Let the height adjust automatically based on content */
+        font-family: Arial, sans-serif;
     }
 
     .subscription-box h2 {
         font-size: 1.5rem; /* Reduced font size */
         margin-bottom: 10px; /* Reduced space between heading and input */
+        font-family: Arial, sans-serif;
     }
 
     .subscription-box p {
@@ -324,6 +345,7 @@
         font-size: 12px;  /* Reduced font size of error message */
         text-align: center;
         margin-top: 10px;
+        font-family: Arial, sans-serif;
     }
                         .social-icons {
                             font-size: 2em;
@@ -334,6 +356,7 @@
                             width: 100px;
                             margin-top: 0px;
                             margin-left: 100px;
+                            font-family: Arial, sans-serif;
                         }
             
                         .social-icons a {
@@ -345,13 +368,11 @@
                             color: #d1d1d1;
                         }
                         body {
-                            background-color: white;
+                            background-color: rgb(108, 136, 110);
                             color: #ffffff;
                             margin-left: 0px;
-                            margin: 0;
-                            padding: 0;
-                            font-family: Arial, sans-serif;
                         }
+
 
     </style>
 </head>
@@ -361,14 +382,13 @@
     <div class="navbar">
         <div class="logo">EnviPixel</div>
         <div>
-            <a href="index.html">Home</a>
-            <a href="area.html">Area</a>
-            <a href="solutions.html">Solutions</a>
-            <a href="events.html">Events</a>
-            <a href="career.html"class="active" >Career</a>
-            <a href="news.html">News</a>
-            <a href="clientPortal.html">Client Portal</a>
-            <a href="about.html">About</a>
+            <a href="Index.html">Home</a>
+            <a href="Solutions.html">Solutions</a>
+            <a href="Events.html">Events</a>
+            <a href="Career.html"class="active" >Career</a>
+            <a href="News.html">News</a>
+            <a href="ClientPortal.html">Client Portal</a>
+            <a href="About.html">About</a>
                
         </div>
         <a href="#" class="a:hover">Contact Us</a>
@@ -377,17 +397,16 @@
     
     <div class="content-section">
         <div class="text-column">
-            <p class="title">JOIN ENVIPIXEL SOLUTIONS</p>
-            <p class="description">Where we bridge Technology and Nature for a Sustainable Future </p>
-           <p class="description"> Would you like to join our journey? <a href="SEU_LINK_AQUI" target="_blank" class="apply-link">Apply here</a></p>
+            <p class="title">Join EnviPixel Solutions</p>
+            <p class="description"> Deseja se juntar à nós nesta jornada? </p>
+            <p class="description"> <a href="SEU_LINK_AQUI" target="_blank" class="apply-link">Cadastre-se aqui</a></p>
         </div>
 
         <div class="image-column">
-            <img src="images/sobre_nos.png" alt="Equipe" />
-            
+            <img src="images/career6_pt.png" alt="Equipe" />
             
             <div class="buttons">
-                <a href="SEU_LINK_AQUI" class="overlay-button">Check Our Open Roles</a>
+                <a href="SEU_LINK_AQUI" class="overlay-button">Veja as Oportunidades</a>
             </div>
         </div>
 
@@ -471,3 +490,4 @@
       
 </body>     
 </html>
+
